@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000"/>
+      <stop offset="100%" style="stop-color:#0a0e1a"/>
+    </linearGradient>
+    <linearGradient id="eGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="eGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1e40af"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="capGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="outerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bgGrad)"/>
+
+  <!-- Outer blue glow halo -->
+  <ellipse cx="200" cy="155" rx="75" ry="75" fill="#1d4ed8" opacity="0.12" filter="url(#outerGlow)"/>
+
+  <!-- E letter body (stylized) -->
+  <!-- Main E shape using path -->
+  <path d="M148 90 L148 210 L222 210 L222 192 L168 192 L168 160 L215 160 L215 143 L168 143 L168 108 L222 108 L222 90 Z"
+        fill="url(#eGrad)" filter="url(#glow)"/>
+
+  <!-- Orbit ring -->
+  <ellipse cx="200" cy="152" rx="80" ry="28"
+           stroke="#93c5fd" stroke-width="3"
+           fill="none" opacity="0.9"
+           transform="rotate(-18 200 152)"
+           filter="url(#glow)"/>
+  <!-- Orbit dot -->
+  <circle cx="272" cy="126" r="6" fill="#bfdbfe" filter="url(#glow)"/>
+
+  <!-- Graduation cap -->
+  <!-- Cap board top -->
+  <polygon points="200,42 240,60 200,78 160,60" fill="white" opacity="0.97" filter="url(#capGlow)"/>
+  <!-- Cap left panel -->
+  <polygon points="160,60 160,80 200,94 200,78" fill="#d1d5db" opacity="0.90"/>
+  <!-- Cap right panel -->
+  <polygon points="240,60 240,80 200,94 200,78" fill="#e5e7eb" opacity="0.95"/>
+  <!-- Tassel cord -->
+  <line x1="240" y1="60" x2="250" y2="80" stroke="#9ca3af" stroke-width="2.5"/>
+  <circle cx="250" cy="83" r="4" fill="#9ca3af"/>
+
+  <!-- EduNexus wordmark -->
+  <!-- "Edu" in white -->
+  <text x="118" y="270" font-family="Arial, Helvetica, sans-serif" font-weight="700"
+        font-size="38" fill="white" letter-spacing="-1">Edu</text>
+  <!-- "Nexus" in blue -->
+  <text x="191" y="270" font-family="Arial, Helvetica, sans-serif" font-weight="700"
+        font-size="38" fill="#3b82f6" letter-spacing="-1">Nexus</text>
+
+  <!-- Tagline -->
+  <text x="200" y="305" font-family="Arial, Helvetica, sans-serif" font-weight="400"
+        font-size="16" fill="#94a3b8" text-anchor="middle" letter-spacing="1">
+    Learn  •  Grow  •  Build Your Future
+  </text>
+</svg>
